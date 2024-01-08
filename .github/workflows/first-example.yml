@@ -1,0 +1,18 @@
+# defining a workflow 
+name: First Workflow
+
+#define a trigger 
+on: push 
+
+#create a job 
+jobs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Welcome message
+    run: echo "My first Github Actions Job"
+    
+    - name: List files
+    run: ls 
+
+    - name: Read file
+    run: cat README.md 
